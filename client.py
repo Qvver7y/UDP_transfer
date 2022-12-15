@@ -2,16 +2,13 @@ from sys import  argv
 import os
 import socket
 
-#script,filename,remotefile = argv
-filename = "/home/Qvver7y/git/gcc/COPYING3"
-remotefile = 'qwerty1'
+script,filename,remotefile = argv
 FILENAME =  filename 
 REMFILENAME =  remotefile
 HOST = "localhost"
 PORT = 9999
 SOCADDR = (HOST, PORT)
 client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-#client.connect((f'{host}' ,int(port)))
 
 file = open(filename, "rb")
 file_size =  os.path.getsize(FILENAME)

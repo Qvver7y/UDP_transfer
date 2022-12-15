@@ -1,11 +1,11 @@
 import socket
 import os
-
+HOST = ''
+PORT = 9999
+SOCKADDR = (HOST,PORT)
 server = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-server.bind(("localhost", 9999))
-#server.listen()
+server.bind(SOCKADDR)
 
-#client, addr = server.accept()
 while True:
     filename = server.recvfrom(1024)[0].decode()
     if len(str(filename)) > 0:
